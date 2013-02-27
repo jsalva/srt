@@ -2,6 +2,18 @@ function exp = config_exp()
 
 global run;
 
+global cue_dur;
+global trial_dur;
+global removal_dur;
+global isi_dur;
+global rest_dur;
+
+cue_dur = 2.000;
+trial_dur = 0.600;
+removal_dur = 0.250;
+isi_dur = 0.250;
+rest_dur = 12.000;
+
 if run == 1
     
     exp.structure = {'R','S','R','T','R','T','R','S','R'};

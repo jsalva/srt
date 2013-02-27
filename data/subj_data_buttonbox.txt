@@ -1,0 +1,2 @@
+trial	type	block	visual_target	motor_target	rt	onset	duration	made_errors
+1	R	1	1	1	0.0000	0.0000	0.0000	0

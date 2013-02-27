@@ -3,12 +3,8 @@ function test(subj,r,set)
 global subject;
 global run;
 global setting;
-global trial_order;
-
-trial_order = csvread('trial_order.csv');
 
 subject = subj;
-
 run = r;
 
 if set == 1
@@ -25,13 +21,15 @@ config_response_collection;
 
 config_output;
 
-trial_obj = create_trial_obj();
+trial_obj = config_trial(1,1,'R',1);
 write_data(trial_obj);
 
-event_obj = create_event_obj();
-write_event_log(event_obj);
+%event_obj = create_event_obj();
+%write_event_log(event_obj);
 
-config_exp;
+exp = config_exp;
+
+event_queue = config_time(exp);
 
 result = check_for_trigger;
 disp(result);

@@ -1,12 +1,13 @@
 function block = config_block(block_num,block_type,num_trials)
 
-global trial_order;
+global run;
 
 block.num = block_num;
 block.type = block_type;
 block.num_trials = num_trials;
 
-block.structure = trial_order(block.num,:);
+block.structure = csvread(['./blocks/run_',num2str(run),...
+    '_block_',num2str(block.num),'.csv']);
 
 if length(block.structure) ~= num_trials
     

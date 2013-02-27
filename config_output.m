@@ -4,9 +4,9 @@ function config_output()
 global setting;
 global subject;
 global data_file;
-global data_header;
+global data_format;
 global event_log_file;
-global event_log_header;
+global event_log_format;
 
 
 if strcmp(setting,'button_box')
@@ -25,10 +25,12 @@ elseif strcmp(setting,'keyboard')
     
 end    
 
-data_header = '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t\n';
-fprintf(data_file,data_header,'trial','type','block','visual_target','motor_target','rt','onset','duration','made_errors');
+data_format = '%d\t%s\t%d\t%d\t%d\t%0.4f\t%0.4f\t%0.4f\t%d\n';
+data_header_format = '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n';
+fprintf(data_file,data_header_format,'trial','type','block','visual_target','motor_target','rt','onset','duration','made_errors');
 
-event_log_header = '%s\t%s\t%s\t%s\t\n';
-fprintf(event_log_file,event_log_header,'event','type','value','time');
+event_log_format = '%d\t%s\t%s\t%0.4f\n';
+event_log_header_format = '%s\t%s\t%s\t%s\n';
+fprintf(event_log_file,event_log_header_format,'event','type','value','time');
 
 end
