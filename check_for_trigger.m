@@ -7,7 +7,7 @@ global trigger_key;
 if any(keys == trigger_key)
 
     result = true;
-    time = times(quit_key);
+    time = times(keys == trigger_key);
     
 else
     

@@ -29,7 +29,7 @@ write_data(trial_obj);
 
 exp = config_exp;
 
-event_queue = config_time(exp);
+event_queue = create_event_queue(exp);
 
 result = check_for_trigger;
 disp(result);

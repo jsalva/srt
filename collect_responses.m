@@ -1,14 +1,11 @@
-function [keys, times] = collect_responses()
+function [pressed_keys, times] = collect_responses()
 % returns the time-sorted members of the queue created for the device 
 % designated to collect responses
 
-%log time
-queue_time = GetSecs;
-
 %Check Queue
-[pressed firstPress firstRelease lastPress lastRelease] = KbQueueCheck();
+[pressed firstPress firstRelease lastPress lastRelease] = KbQueueCheck;
 
-keys = [];
+pressed_keys = [];
 times = [];
 
 %if keys found
@@ -37,7 +34,7 @@ if pressed
     
     time_sorted_key_queue = sortrows(key_queue,2);    
 
-    keys = time_sorted_key_queue(:,1)';
+    pressed_keys = time_sorted_key_queue(:,1)';
     times = time_sorted_key_queue(:,2)';
 
 end

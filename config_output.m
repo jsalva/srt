@@ -29,7 +29,7 @@ data_format = '%d\t%s\t%d\t%d\t%d\t%0.4f\t%0.4f\t%0.4f\t%d\n';
 data_header_format = '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n';
 fprintf(data_file,data_header_format,'trial','type','block','visual_target','motor_target','rt','onset','duration','made_errors');
 
-event_log_format = '%d\t%s\t%s\t%0.4f\n';
+event_log_format = '%d\t%s\t%s\t%.2f\n';
 event_log_header_format = '%s\t%s\t%s\t%s\n';
 fprintf(event_log_file,event_log_header_format,'event','type','value','time');
 

@@ -7,7 +7,7 @@ global quit_key;
 if any(keys == quit_key)
 
     result = true;
-    time = times(quit_key);
+    time = times(keys == quit_key);
     
 else
     

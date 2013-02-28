@@ -8,12 +8,22 @@ trial.type = block_type;
 trial.block = block_num;
 
 if strcmp(block_type,'T')
-    trial.visual_target = mod(target_num+1,4);
+    
+    trial.motor_target = mod(target_num+1,5);
+    
+    if trial.motor_target == 0
+       
+        trial.motor_target = 1;
+        
+    end
+
 else
-    trial.visual_target = target_num;
+    
+    trial.motor_target = target_num;
+
 end
 
-trial.motor_target = target_num;
+trial.visual_target = target_num;
 trial.rt = 0;
 trial.onset = 0;
 trial.target_duration = trial_dur + removal_dur;
