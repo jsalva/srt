@@ -12,11 +12,11 @@ global collect_rt_bool;
 subject = subj;
 run = r;
 
-if set == 1
+if set == 2
 
     setting = 'button_box';
 
-elseif set == 2
+elseif set == 1
 
     setting = 'keyboard';
 

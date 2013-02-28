@@ -36,11 +36,15 @@ else
             trial.rt = sorted_press_times(1) - trial.onset - start_time;
             collect_rt_bool = false;
 
-            if (pressed_keys(1) == keys(trial.motor_target))
+            if ~isfield(trial,'force_error') && (pressed_keys(1) == keys(trial.motor_target))
                 
                 trial.made_errors = 0;
             
             end
+
+        elseif collect_rt_bool && any(pressed_keys)
+
+            trial.force_error = 1;
 
         end
 
