@@ -5,6 +5,8 @@ global rect_1;
 global rect_2;
 global rect_3;
 global rect_4;
+global down_arrow;
+global right_arrow;
 
 rect_1 = [0,0,0,0];
 rect_2 = [0,0,0,0];
@@ -41,5 +43,18 @@ rect_4(1) = width/2 + height/16 + 2*(height/8);
 rect_4(2) = height/2 - height/16;
 rect_4(3) = width/2 + height/16 + 3*(height/8);
 rect_4(4) = height/2 + height/16;
+
+scale = 50;
+
+down_arrow = [repmat(width/2,1,6);repmat(height/2,1,6)]+ ...
+    scale*[[0 -1; 0 1]',...
+           [1 0; 0 1]',...
+           [-1 0; 0 1]'];
+
+right_arrow = [repmat(width/2,1,6);repmat(height/2,1,6)]+ ...
+    scale*[[0 -1; 1 0]',...
+           [-1 0; 1 0]',...
+           [0 1; 1 0]'];
+
 
 end

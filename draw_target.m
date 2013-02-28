@@ -31,7 +31,14 @@ switch target
         
 end
 
-Screen('FillOval',main_window,[255,255,255],rect);
+subtract_rect = [0,0,0,0];
+
+subtract_rect(1) = (rect(3) - rect(1))/6;
+subtract_rect(2) = (rect(4) - rect(2))/6;
+subtract_rect(3) = - (rect(3) - rect(1))/6;
+subtract_rect(4) = - (rect(4) - rect(2))/6;
+
+Screen('FillOval',main_window,[255,255,255],rect+subtract_rect);
 
 flip_time = Screen('Flip',main_window);
 

@@ -9,11 +9,15 @@ trial.block = block_num;
 
 if strcmp(block_type,'T')
     
-    trial.motor_target = mod(target_num+1,5);
+    motor_target = target_num+1;
     
-    if trial.motor_target == 0
+    if motor_target == 5
        
         trial.motor_target = 1;
+        
+    else
+        
+        trial.motor_target = motor_target;
         
     end
 
@@ -28,6 +32,6 @@ trial.rt = 0;
 trial.onset = 0;
 trial.target_duration = trial_dur + removal_dur;
 trial.duration = 0;
-trial.made_errors = 0;
+trial.made_errors = 1;
 
 end
