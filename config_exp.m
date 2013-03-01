@@ -20,7 +20,7 @@ if run == 1
     
 elseif run == 2
    
-    exp.strucutre = {'R','T','R','S','R','S','R','T','R'};
+    exp.structure = {'R','T','R','S','R','S','R','T','R'};
     
 end
 
