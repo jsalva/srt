@@ -18,21 +18,17 @@ for i = numbers
 
             start_with_j = total_permutations(total_permutations(:,1) == j,:);
 
-            disp(start_with_j)
-
             for k = numbers
 
                 end_in_k = start_with_j(start_with_j(:,end) == k,:);
 
-                remaining_2 = numbers(numbers~=k);
+                remaining_2 = numbers(numbers ~= k);
 
                 for counter_2 = 1:length(end_in_k(:,1))
-                    disp(counter_2)
-                    disp(end_in_k)
 
                     for l = remaining_2
 
-                        start_with_l = total_permutations(total_permutations(:,end) == l,:);
+                        start_with_l = total_permutations(total_permutations(:,1) == l,:);
 
                         for counter_3 = 1:length(start_with_l(:,1))
 

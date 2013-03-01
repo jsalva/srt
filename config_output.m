@@ -23,6 +23,9 @@ elseif strcmp(setting,'keyboard')
     data_filename = ['./data/',subject,'_data_keyboard.txt'];
     data_file = fopen(data_filename,'w'); 
     
+    event_log_filename = ['./data/',subject,'_event_log_keyboard.txt'];
+    event_log_file = fopen(event_log_filename,'w');
+    
 end    
 
 data_format = '%d\t%s\t%d\t%d\t%d\t%0.6f\t%0.6f\t%0.6f\t%d\n';
