@@ -1,0 +1,5 @@
+event	type	value	time
+0	start	start	41791.395280
+1	cue	R	0.019112
+0	key	LeftControl	41792.568559
+0	key	c	41792.696557

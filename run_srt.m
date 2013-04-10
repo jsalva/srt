@@ -22,8 +22,7 @@ elseif set == 1
 
 end
 
-config_response_collection;
-KbQueueCheck
+
 config_output;
 
 exp = config_exp;
@@ -32,12 +31,14 @@ event_queue = create_event_queue(exp);
 
 config_screen;
 
+config_response_collection;
+KbQueueCheck
+
 draw_instructions;
 
 while ~check_for_trigger
     
 end
-
 start_time = GetSecs;
 
 event = config_event(0,'start','start',0,start_time,0);
